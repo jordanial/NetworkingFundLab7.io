@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -14,11 +15,9 @@
 <header class="w3-container w3-theme w3-padding" id="myHeader">
 <!--   <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i>  -->
   <div class="w3-center">
-  <h4>BEAUTIFUL RESPONSIVE WEB SITES</h4>
-  <h1 class="w3-xxxlarge w3-animate-bottom">BUILT WITH W3.CSS</h1>
-    <div class="w3-padding-32">
-      <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">LEARN W3.CSS</button>
-    </div>
+  <h4>Networking Fundamentals</h4>
+  <h1 class="w3-xxxlarge w3-animate-bottom">Lab 7 Jordani Alpuche</h1>
+    
   </div>
 </header>
 
@@ -28,126 +27,139 @@
 <div class="w3-row-padding w3-center w3-margin-top">
 <div class="w3-third w3-teal w3-border">
   <div class="w3-card w3-container" style="min-height:460px">
-  <h3>Responsive</h3><br>
+  <h3>Vehicle Mileage</h3><br>
   <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-  <p>Built-in responsiveness</p>
-  <p>Mobile first fluid grid</p>
-  <p>Fits any screen sizes</p>
-  <p>PC Tablet and Mobile</p>
+    <hr>
+  <label for="model">Enter Vehicle Model: </label><br>
+ <input type="vmodel" name="model" id="model"> <button id="getMileage">Submit</button>
+ <p id="vm_make">Make: </p>
+  <p id="vm_mpg">City MPG: </p>
+  <p id="vm_class">Class: </p>
+  <p id="vm_cylinders">Cylinders: </p>
+  <p id="vm_liters">Liters: </p>
+ 
   </div>
 </div>
 
 <div class="w3-third">
   <div class="w3-card w3-container w3-blue-grey" style="min-height:460px">
-  <h3>Standard CSS</h3><br>
+  <h3>Weather</h3><br>
   <i class="fa fa-css3 w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-  <p>Standard CSS only</p>
-  <p>Easy to learn</p>
-  <p>No need for jQuery</p>
-  <p>No JavaScript library</p>
+  <hr>
+  <label for="city">Enter City</label><br>
+  <input type="text" name="city" id="city"><button id="getWeather">Submit</button>
+  <p id="w_degrees">Degrees: </p>
+  <p id="w_feel">Feel Like: </p>
+  <p id="w_humidity">Humidity</p>
+  <p id="w_rise">Sunrise: </p>
+  <p id="w_set">Sunset: </p>
+  
   </div>
 </div>
 
 <div class="w3-third">
   <div class="w3-card w3-container w3-blue" style="min-height:460px">
-  <h3>Design</h3><br>
+  <h3>Dad Jokes</h3><br>
   <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-  <p>Paper like design</p>
-  <p>Bold colors and shadows</p>
-  <p>Equal across platforms</p>
-  <p>Equal across devices</p>
+  <hr>
+  <label for="">Click to get a joke</label><br><br>
+  <button id="getJokes">Submit</button>
+  <p id="jokes"></p>
+  
   </div>
 </div>
 </div>
 
-<div class="w3-container">
 <hr>
-<div class="w3-center">
-  <h2>Color Classes</h2>
-</div>
 
-<div class="w3-row">
-  <div class="w3-col w3-container m2 w3-red"><p>Red</p></div>
-  <div class="w3-col w3-container m2 w3-blue"><p>Blue</p></div>
-  <div class="w3-col w3-container m2 w3-blue-grey"><p>Blue Grey</p></div>
-  <div class="w3-col w3-container m2 w3-teal"><p>Teal</p></div>
-  <div class="w3-col w3-container m2 w3-yellow"><p>Yellow</p></div>
-  <div class="w3-col w3-container m2 w3-orange"><p>Orange</p></div>
-</div>
-</div>
-
-<!-- Footer -->
-<footer class="w3-container w3-theme-dark w3-padding-16">
-  <h3>Footer</h3>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-  <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
-    <span class="w3-text w3-theme-light w3-padding">Go To Top</span>    
-    <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
-    <i class="fa fa-chevron-circle-up"></i></span></a>
-  </div>
-  <p>Remember to check out our  <a href="w3css_references.asp" class="w3-btn w3-theme-light" target="_blank">W3.CSS Reference</a></p>
-</footer>
 
 <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
 <script>
 
-// function showDivs(n) {
-//   var x = document.getElementsByClassName("mySlides");
-//   if (n > x.length) {slideIndex = 1}    
-//   if (n < 1) {slideIndex = x.length} ;
-//   for (i = 0; i < x.length; i++) {
-//     x[i].style.display = "none";  
-//   }
-//   x[slideIndex-1].style.display = "block";  
-// }
 
-// showDivs(1);
+////////////////vehicle mileage////////////////////
+let vmBtn = document.getElementById('getMileage');
+vmBtn.addEventListener('click', function(){
 
-//   const axios = require('axios');
-
-// const encodedParams = new URLSearchParams();
-// encodedParams.set('locationKey', '<REQUIRED>');
-
-// const options = {
-//   method: 'POST',
-//   url: 'https://accuweatherstefan-skliarovv1.p.rapidapi.com/get24HoursConditionsByLocationKey',
-//   headers: {
-//     'content-type': 'application/x-www-form-urlencoded',
-//     'X-RapidAPI-Key': '270189324dmsh5cefab1c7e95cd2p1034f3jsnc5d826a02e10',
-//     'X-RapidAPI-Host': 'AccuWeatherstefan-skliarovV1.p.rapidapi.com'
-//   },
-//   data: encodedParams,
-// };
-
-//   console.log('Options:' + options);
-
-// try {
-// 	const response = await axios.request(options);
-// 	console.log(response.data);
-// } catch (error) {
-// 	console.error(error);
-// }
+    var vmTextbox = document.getElementById('model').value; 
+    $.ajax({
+        method: 'GET',
+        url: 'https://api.api-ninjas.com/v1/cars?model=' + vmTextbox,
+        headers: { 'X-Api-Key': 'tMB5q9x3qhW1cxk5mVkBXA==iflYI0RYsW1Nb11k'},
+        contentType: 'application/json',
+        success: function(result) {
+            document.getElementById('vm_make').append(result[0]['make']);
+            document.getElementById('vm_mpg').append(result[0]['city_mpg']);
+            document.getElementById("vm_class").append(result[0]['class']);
+            document.getElementById("vm_cylinders").append(result[0]['cylinders']);
+            document.getElementById("vm_liters").append(result[0]['displacement']);
+           
+            //  console.log(result);
+        },
+        error: function ajaxError(jqXHR) {
+            console.error('Error: ', jqXHR.responseText);
+        }
+    });
+})
+                                   
+/////////////////////weather ///////////////////////
 
 
-	async function loadLocation() {
-  const myIpAddress = await fetch("https://api.ipify.org?format=json");
-  
-  const ipAddress = await myIpAddress.json();
-  console.log("my IP Address is: ", ipAddress);
-  const response = await fetch("https://ip-geolocation-ipwhois-io.p.rapidapi.com/json/?ip="+ipAddress.ip, {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "ip-geolocation-ipwhois-io.p.rapidapi.com",
-		"x-rapidapi-key": "044e648b19mshfece6f865ead2b3p1a1a7ajsn036a4345378f"
+let w_btn=document.getElementById('getWeather');
 
-		// 'X-RapidAPI-Key': '270189324dmsh5cefab1c7e95cd2p1034f3jsnc5d826a02e10',
-  //  		'X-RapidAPI-Host': 'AccuWeatherstefan-skliarovV1.p.rapidapi.com'
-	}
+w_btn.addEventListener('click',function(){
+    var city = document.getElementById('city').value;
+
+    function timestampToDate(timestamp){
+        let date = new Date(timestamp * 1000).toLocaleString('en-US', { hour: 'numeric', hour12: true });
+        // console.log(date)
+        return date;
+    }   
+
+$.ajax({
+    method: 'GET',
+    url: 'https://api.api-ninjas.com/v1/weather?city=' + city,
+    headers: { 'X-Api-Key': 'tMB5q9x3qhW1cxk5mVkBXA==iflYI0RYsW1Nb11k'},
+    contentType: 'application/json',
+    success: function(result) {
+      
+        document.getElementById("w_degrees").append(result['temp'])
+        document.getElementById("w_feel").append(result["feels_like"])
+        document.getElementById("w_humidity").append(result["humidity"])
+        document.getElementById("w_rise").append(timestampToDate(result["sunrise"]))
+        document.getElementById("w_set").append(timestampToDate(result["sunset"]))  
+
+        // console.log(result);
+    },
+    error: function ajaxError(jqXHR) {
+        console.error('Error: ', jqXHR.responseText);
+    }
 });
-  const location = await response.json();
 
-		console.log(location);
-	}
+})
+
+////////////////////////dad jokes /////////////////////
+
+
+let jkBtn = document.getElementById('getJokes');
+
+jkBtn.addEventListener('click',function(){
+    var limit = 1
+$.ajax({
+    method: 'GET',
+    url: 'https://api.api-ninjas.com/v1/dadjokes?limit=' + limit,
+    headers: { 'X-Api-Key': 'tMB5q9x3qhW1cxk5mVkBXA==iflYI0RYsW1Nb11k'},
+    contentType: 'application/json',
+    success: function(result) {
+        document.getElementById('jokes').innerHTML = result[0]['joke'] + ' Badum tss ..';
+        console.log(result);
+    },
+    error: function ajaxError(jqXHR) {
+        console.error('Error: ', jqXHR.responseText);
+    }
+});
+
+})
 
 </script>
 
