@@ -103,6 +103,31 @@ function showDivs(n) {
 
 showDivs(1);
 
+  const axios = require('axios');
+
+const encodedParams = new URLSearchParams();
+encodedParams.set('locationKey', '<REQUIRED>');
+
+const options = {
+  method: 'POST',
+  url: 'https://accuweatherstefan-skliarovv1.p.rapidapi.com/get24HoursConditionsByLocationKey',
+  headers: {
+    'content-type': 'application/x-www-form-urlencoded',
+    'X-RapidAPI-Key': '270189324dmsh5cefab1c7e95cd2p1034f3jsnc5d826a02e10',
+    'X-RapidAPI-Host': 'AccuWeatherstefan-skliarovV1.p.rapidapi.com'
+  },
+  data: encodedParams,
+};
+
+  console.log('Options:' + options);
+
+try {
+	const response = await axios.request(options);
+	console.log(response.data);
+} catch (error) {
+	console.error(error);
+}
+
 </script>
 
 </body>
