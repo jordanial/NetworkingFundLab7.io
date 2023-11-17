@@ -17,7 +17,7 @@
   <div class="w3-center">
   <h4>Networking Fundamentals</h4>
   <h1 class="w3-xxxlarge w3-animate-bottom">Lab 7 Jordani Alpuche</h1>
-    
+     <p id="ip"></p>
   </div>
 </header>
 
@@ -75,6 +75,12 @@
 
 <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
 <script>
+    async function getPublicIp(){
+        const ip = await fetch("https://api.ipify.org?format=json");  
+         const publicip = await ip.json();        
+         document.getElementById('ip').append('Your public ip is: '+publicip['ip']);
+    }
+    getPublicIp()
 
 
 ////////////////vehicle mileage////////////////////
