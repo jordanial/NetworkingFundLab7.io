@@ -129,8 +129,8 @@ $.ajax({
     contentType: 'application/json',
     success: function(result) {
       
-        document.getElementById("w_degrees").append(result['temp'])
-        document.getElementById("w_feel").append(result["feels_like"])
+        document.getElementById("w_degrees").append((((result['temp'] * 9)/5)+32))
+        document.getElementById("w_feel").append((((result["feels_like"] * 9)/5)+32))
         document.getElementById("w_humidity").append(result["humidity"])
         document.getElementById("w_rise").append(timestampToDate(result["sunrise"]))
         document.getElementById("w_set").append(timestampToDate(result["sunset"]))  
